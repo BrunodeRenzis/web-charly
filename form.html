@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/form.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./discografia.html">Discografia</a></li>
+                <li class="seccionActual"><a href="#">Sorteo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="form-container">
+        <form action="./gracias.html" method="post" enctype="multipart/form-data">
+            <div class="titleFormContainer">
+                <h2>Participá por un encuentro privado con Charly Garcia</h2>
+            </div>
+            <div class="datosConcurso">
+                <div class="datosConcursante">
+                    <h3 class="text-center">Ingresá tus datos personales</h3>
+                    <div class="nombreYApellidoContainer">
+                        <div class="nombreContainer">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" placeholder="Ingresá tu nombre" nombre="nombre" required>
+                        </div>
+                        <div class="apellidoContainer">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" placeholder="Ingresá tu apellido" apellido="apellido" required>
+                        </div>
+                    </div>
+        
+                    <div class="emailYFotoContainer">
+                        <div class="emailContainer">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" nombre="email" placeholder="Ingresá tu email" required>
+                        </div>
+                        <div class="fotoContainer">
+                            <label for="photo">Subí una foto con Charly:</label>
+                            <input type="file" id="photo" name="photo" accept="image/*" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="triviaContainer">
+
+                    <div class="anecdotaContainer">
+                        <label for="message"><h3>Contanos cómo fue la vez que te encontraste con Charly</h3></label>
+                        <textarea id="message" nombre="message" required></textarea>
+                    </div>
+        
+                    <div class="futbolTrivia">
+                        <div class="containerTrivia">
+                            <label for="team"><h3>¿De qué equipo es hincha Charly Garcia?</h3></label>
+                            <select id="team" name="team" required>
+                                <option value="boca">Boca Juniors</option>
+                                <option value="river">River Plate</option>
+                                <option value="lanus">Lanús</option>
+                                <option value="banfield">Banfield</option>
+                                <option value="racing">Racing Club</option>
+                                <option value="independiente">Independiente</option>
+                                <option value="huracan">Huracán</option>
+                                <option value="sanlorenzo">San Lorenzo</option>
+                                <option value="indepdelvalle">Club Atlético Independiente del valle</option>
+                                <option value="nob">Newells old boys</option>
+                                <option value="rosariocentral">Rosario Central</option>
+                                <option value="argentinos">Argentinos Jrs</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <fieldset>
+                        <legend><h3>Nombre cuáles de estas bandas fueron influencias para Charly</h3></legend>
+                        <div class="option">
+                            <label> Virus</label>
+                            <input class="checkboxOption" type="checkbox" name="influences" value="virus">
+                        </div>
+                        <div class="option">
+                            <label>Genesis</label>
+                            <input class="checkboxOption" type="checkbox" name="influences" value="genesis"> 
+                        </div>
+                        <div class="option">
+                            <label>Yes</label>
+                            <input class="checkboxOption" type="checkbox" name="influences" value="yes"> 
+                        </div>
+                        <div class="option">
+                            <label>Premiatta Forneria Marconi</label>
+                            <input class="checkboxOption" type="checkbox" name="influences" value="pfm"> 
+                        </div>
+                        <div class="option">
+                            <label>Led Zeppelin</label>
+                            <input class="checkboxOption" type="checkbox" name="influences" value="ledzeppelin"> 
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="buttonContainer">
+                    <button type="submit">Enviar</button>
+                </div>
+    
+            </div>
+        </form>
+    </main> 
+    <div id="perfil">
+        <div class="contentAuthor">
+            <span id="close">X</span>
+            <ul class="datos">
+                
+                    <li>Alumno:</li>
+                    <li>Bruno de Renzis</li>
+                
+                    <li>Materia:</li>
+                    <li>Maquetado y Desarrollo Web</li>
+                
+                    <li>Docente:</li>
+                    <li>Mabel Garcia Rodriguez</li>
+            </ul>
+            <div class="redesContainer">
+                <ul class="redes">
+                    <li><a class="social-media-item" id="facebook" href="https://www.facebook.com/Livinthefastline" target="_blank">Facebook</a></li>
+                    <li><a class="social-media-item" id="instagram" href="https://www.instagram.com/brunoderenzisrubinetti/" target="_blank">Instagram</a></li>
+                    <li><a class="social-media-item" id="linkedin" href="https://www.linkedin.com/in/bruno-de-renzis-177206166/" target="_blank">Linkedin</a></li>
+                </ul>
+            </div>
+            <div class="containerLeyenda">
+                <span id="leyenda">
+                    Este sitio es una entrega para un TP del primer cuatrimestre de la Escuela Da Vinci con el año actual.
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p class="saynomore"><a href="#perfil" id="open-popup">PERFIL BRUNO DE RENZIS</a></p>
+    </footer>
+    <script src="scripts/app.js"></script>   
+</body>
+</html>

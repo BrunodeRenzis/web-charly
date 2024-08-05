@@ -1,0 +1,419 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'rock_itregular';
+  src: url('../assets/fonts/rockit-webfont.woff2') format('woff2'),
+       url('../assets/fonts/rockit-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+  .slider-container {
+    width: 100%;
+    margin: auto;
+  }
+
+  .contenido{
+    display: flex !important;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .slick-prev{
+    left: 20px;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .slick-next{
+    right: 20px;
+    position: absolute;
+    z-index: 11;
+  }
+
+  .slick-prev::before{
+    font-size: 30px !important;
+  }
+  .slick-next::before{
+    font-size: 30px !important;
+  }
+
+
+  .slick-cloned{
+    width: 451px !important;
+    margin-left: 200px !important;
+    height: 0;
+  }
+
+  .historiaContainer{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+  }
+
+  .historia{
+    display: flex;
+    margin-bottom: 0%;
+    padding: 2vh;
+    flex-direction: column;
+
+  }
+
+  .historia>h3{
+      margin-top: 2vh;
+  }
+
+  .lista{
+    padding:2vh;
+  }
+
+  .seccionActual{
+    text-decoration: underline;
+  }
+
+  .listaContainer{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 55%;
+    background-color: rgba(0, 0, 0, 0.9);
+   
+  }
+
+  .listaContainer >h2,h4{
+    text-align: center;
+    margin-bottom: 2%;
+  }
+
+  header{
+    height: 8vh;
+  }
+
+  h4{
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+
+ 
+
+  ol{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .slider-main{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .slider-main img {
+    width: 100%;
+    height: 500px;
+    max-width: 500px;
+  }
+
+  .slider-thumb img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .slider-thumb{
+    width: 100%;
+    margin-top: 2%;
+  }
+
+  .imgContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 10%;
+  }
+
+  .imgContainer>img{
+    width: 500px;
+    height: 500px;
+  }
+  .slider-thumb img:hover{
+    cursor: pointer;
+  }
+  h1, p, ul, li,h2,h3,h4{
+    color: white;
+  }
+
+  .discografiaContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+  }
+
+  h1{
+    font-family: 'rock_itregular', sans-serif;
+    text-decoration: underline 2px white;
+    text-align: center;
+    font-size: 50px;
+    background-color: #000000;
+    margin-bottom: 2vh;
+  }
+
+  h2{
+    text-decoration: underline;
+  }
+
+  footer{
+    width: 100%;
+    position: sticky;
+    height: 6%;
+    background: linear-gradient(to bottom right, #d31200, #272626, #161111, #5f0101);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+  }
+  .saynomore{
+    font-family: 'rock_itregular', sans-serif;
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-break: loose;
+    letter-spacing: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .go-back{
+    color: white;
+    font-size: 20px;
+    width: 12%;
+    padding: 1vw;
+    text-align: center;
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+    margin-top: 1vh;
+  }
+
+  .displayLista{
+    position: fixed;
+    width: 90vw;
+    padding: 4%;
+    text-align: center;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+
+  #vidaLista{
+    display: none;
+  }
+
+
+  #vidaLista:target{
+    display: block;
+    opacity: 1;
+  }
+
+  #peliculasLista{
+    display: none;
+  }
+
+
+  #peliculasLista:target{
+    display: block;
+    opacity: 1;
+  }
+
+  #grasaLista{
+    display: none;
+  }
+
+
+  #grasaLista:target{
+    display: block;
+    opacity: 1;
+  }
+
+  #clicsLista{
+    display: none;
+    
+  }
+
+
+  #clicsLista:target{
+    display: block;
+    opacity: 1;
+  }
+
+
+  #leyenda{
+    color: white;
+  }
+
+  a, p{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+  }
+
+
+  .containerDiscografia{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .disco{
+    border: 12px solid white;
+  }
+
+  #vida{
+    display: block;
+    background-image: url('../assets/vida-min.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+    
+    margin: 2vh auto;
+  }
+
+  #peliculas{
+    display: block;
+    background-image: url('../assets/peliculas.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+    
+    margin: 2vh auto;
+  }
+
+  #grasa{
+    display: block;
+    background-image: url('../assets/grasa.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+    
+    margin: 2vh auto;
+  }
+
+  #clics{
+    display: block;
+    background-image: url('../assets/clics.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+    margin: 2vh auto;
+  }
+
+
+
+  @media screen and (max-width: 1023px){
+    .slider-container{
+      display: none;
+    }
+
+    h1{
+      font-size: 20px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px){
+    .slider-container{
+      display: block;
+    }
+    .containerDiscografia{
+      display: none;
+    }
+
+    .imgContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 10px 1%;
+    }
+
+    .listaContainer{
+      margin-left: 65%;
+    }
+  }
+
+  @media screen and (max-width: 767px){
+
+    .containerArtista{
+      margin-top: 1vh;
+    }
+  
+    article, img{
+      width: 100%;
+    }
+  
+    iframe{
+      width: 90%;
+      height: auto;
+    }
+  
+    main{
+      margin-top: 10%;
+    }
+
+    body{
+      margin-top: 10% !important;
+    }
+  
+    img, iframe{
+      margin-bottom: 1vh;
+    }
+    li>a{
+      font-size: 10px;
+    }
+    .slider-container{
+      display: none;
+    }
+  }

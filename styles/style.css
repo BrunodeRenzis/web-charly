@@ -1,0 +1,348 @@
+html{
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'rock_itregular';
+  src: url('../assets/fonts/rockit-webfont.woff2') format('woff2'),
+       url('../assets/fonts/rockit-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  background-image: url("../assets/collage-charly.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  margin:0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.containerArtista{
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+  font-family: 'rock_itregular', sans-serif;
+  text-decoration: underline 2px white;
+  text-align: center;
+  font-size: 50px;
+  background-color: #000000;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to bottom right, #d31200, #d9410e, #ec0101, #b84d00);
+  color: #fff;
+  text-align: center;
+  flex-direction: row;
+  font-family: 'rock_itregular', sans-serif;
+  z-index: 1;
+}
+
+main {
+  margin-top: 5%;
+  height: 81%;
+  flex: 1;
+}
+
+section {
+  margin: 20px;
+  padding: 20px;
+  padding-top: 10%;
+  margin-top: -10%;
+}
+
+nav, ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer{
+  width: 100%;
+  background-size: contain;
+  background-repeat: repeat;
+  background: linear-gradient(to bottom right, #d31200, #272626, #161111, #5f0101);
+}
+
+.saynomore{
+  font-family: 'rock_itregular', sans-serif;
+  font-size: 1em;
+  width: 100%;
+  color: white;
+  text-align: center;
+  line-break: loose;
+  letter-spacing: 2em;
+}
+
+section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+article{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1;
+  height: auto;
+  line-height:30px;
+  font-size: 1em;
+  padding: 0 10px;
+}
+
+article,img{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.seccionActual{
+  text-decoration: underline;
+}
+
+h2,h3{
+  text-decoration: underline;
+}
+
+.bandasCharly{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+#perfil{
+  display: none;
+  position: fixed;
+  width: 60vw;
+  height: 40vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.redesContainer{
+  margin: 1vh 0;
+  width: 30%;
+
+}
+
+.redes{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0;
+  font-size: 0;
+}
+
+.redes>li{
+  margin: 0;
+  padding: 0;
+}
+
+.redes>li>a{
+  margin: 0;
+  padding: 0;
+}
+
+
+.redes>li>a>img{
+  max-width: 5vw;
+}
+
+#perfil:target{
+  display: block;
+  background-color: rgb(72, 70, 70);
+  opacity: 1;
+}
+
+.contentAuthor{
+  position: relative;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media-item{
+  border-radius: 8px;
+}
+
+#close{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: white;
+}
+
+#close:hover{
+  cursor: pointer;
+}
+
+.datos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.datos>div{
+  width: 100%;
+  display: contents;
+}
+.containerLeyenda{
+  padding-bottom: 2vh;
+}
+#leyenda{
+  font-weight: bold;
+  padding-bottom: 2vh;
+  text-align: center;
+}
+
+#facebook{
+  background: url('../assets/fblogo.png');
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: transparent;
+}
+
+#instagram{
+  background: url('../assets/iglogo.png');
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: transparent;
+}
+
+#linkedin{
+  background: url('../assets/lnlogo.png');
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: transparent;
+}
+
+
+@media screen and (max-width: 1023px){
+
+  p.saynomore{
+    font-size: 6px;
+  }
+
+  p.saynomore>a{
+    font-size: 10px;
+  }
+
+  body{
+    margin-top: 15%;
+    width: 100vw;
+  }
+
+  h1{
+    font-size:18px;
+  }
+
+  h2{
+    font-size: 16px;
+  }
+
+  h3{
+    font-size: 14px;
+  }
+
+  p{
+    font-size: 12px;
+  }
+
+  section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 0;
+    padding-top: 10%;
+    margin-top: -10%;
+  }
+
+  article, img{
+    width: 100%;
+  }
+
+  iframe{
+    width: 100%;
+  }
+
+
+  img, iframe{
+    margin-bottom: 1vh;
+  }
+  li>a{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  iframe{
+    width: 90%;
+    height: auto;
+  }
+
+  main{
+    margin-top: 10%;
+  }
+
+  h1{
+    font-size:14px;
+  }
+
+  #perfil{
+    width:98vw;
+  }
+
+  .containerLeyenda{
+    display: flex;
+    justify-content: center;
+  }
+
+  .redesContainer>.redes>li>a{
+    font-size: 0;
+  }
+}
