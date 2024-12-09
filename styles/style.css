@@ -155,14 +155,14 @@ h2,h3{
 
 .redesContainer{
   margin: 1vh 0;
-  width: 30%;
-
+  display: flex;
+  justify-content: center;
 }
 
 .redes{
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  width: 50%;
   padding: 0;
   font-size: 0;
 }
@@ -260,6 +260,16 @@ h2,h3{
   background-color: transparent;
 }
 
+picture {
+  width: 40%;
+  display: flex;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+}
+
 
 @media screen and (max-width: 1023px){
 
@@ -302,7 +312,7 @@ h2,h3{
     margin-top: -10%;
   }
 
-  article, img{
+  article, img, picture {
     width: 100%;
   }
 
@@ -345,4 +355,13 @@ h2,h3{
   .redesContainer>.redes>li>a{
     font-size: 0;
   }
+  picture {
+    width: 100%;
+    display: flex;
+  }
+  picture img {
+    width: 100%;
+    height: auto;
+  }
 }
+
